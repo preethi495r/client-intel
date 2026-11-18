@@ -1,0 +1,62 @@
+[
+  {
+    "id": "c001_at_risk",
+    "client": "Halden Bet",
+    "trigger": "at_risk",
+    "rep_context": "Usage feels down and they have been complaining. How worried should I be?",
+    "review_focus": [
+      "Identify the affected products from comparable usage windows.",
+      "Use the service and commercial evidence to propose a retention action and keep the causes open."
+    ]
+  },
+  {
+    "id": "c001_renewal",
+    "client": "C001",
+    "trigger": "renewal",
+    "rep_context": "",
+    "review_focus": [
+      "Lead with the effective term, notice deadline and renewal execution status.",
+      "Connect the in-play scope discussion and service issues to the renewal preparation."
+    ]
+  },
+  {
+    "id": "c002_upsell",
+    "client": "Corvane Media",
+    "trigger": "upsell",
+    "rep_context": "Seeing their head of digital next week. What could we grow?",
+    "review_focus": [
+      "Use the companion-app need, catalogue fit and signed holdings to explain the widgets discussion.",
+      "Qualify the earlier analytics objection and avoid treating it as resolved."
+    ]
+  },
+  {
+    "id": "c002_meeting_prep",
+    "client": "C002",
+    "trigger": "meeting_prep",
+    "rep_context": "",
+    "review_focus": [
+      "Turn the latest product-planning note and streaming cost concern into a concise agenda.",
+      "Distinguish what the client reportedly wants from verified usage or billing evidence."
+    ]
+  },
+  {
+    "id": "c007_renewal",
+    "client": "C007",
+    "trigger": "renewal",
+    "rep_context": "",
+    "review_focus": [
+      "Distinguish the expired term, pending renewal, CRM negotiation and reported commercial agreement.",
+      "Ask what covers interim service and what is still required for execution."
+    ]
+  },
+  {
+    "id": "c007_meeting_prep",
+    "client": "Varrow Racing Authority",
+    "trigger": "meeting_prep",
+    "rep_context": "",
+    "review_focus": [
+      "Prioritise the legal review and service-continuity questions.",
+      "Cite both the meeting account and the recorded execution position while retaining the uncertainty."
+    ]
+  }
+]

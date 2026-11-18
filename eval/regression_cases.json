@@ -1,0 +1,35 @@
+[
+  {
+    "client": "C003", "trigger": "meeting_prep", "label": "Brenmoor note and record scopes",
+    "expect": {
+      "contextual.note.N-006.6.140": "up massively",
+      "contextual.note.N-006.6.300": "around +10%",
+      "telemetry.usage.STREAM.yoy": "fell by 22.6% year over year",
+      "commercial.opportunity.O-0003": "Awaiting client board approval"
+    }
+  },
+  {
+    "client": "C004", "trigger": "at_risk", "label": "Quillon short history",
+    "expect": {"telemetry.usage.LIVE_DATA.yoy": "year-over-year comparison is unavailable"}
+  },
+  {
+    "client": "C005", "trigger": "at_risk", "label": "Marrowfield missing month outside comparison",
+    "expect": {"telemetry.usage.STREAM.coverage_gap": "missing in Mar 2026", "telemetry.usage.STREAM.yoy": "rose by 3.9%"}
+  },
+  {
+    "client": "C006", "trigger": "renewal", "label": "Tidewell duplicate contract and usage",
+    "expect": {"commercial.rows.contracts.K-0010": "counted once", "telemetry.usage.LIVE_DATA.duplicates": "counted once"}
+  },
+  {
+    "client": "C010", "trigger": "at_risk", "label": "Saltmarsh duplicate ticket",
+    "expect": {"telemetry.support.T-0281.duplicate": "both source occurrences"}
+  },
+  {
+    "client": "C014", "trigger": "meeting_prep", "label": "Account without meeting notes",
+    "expect": {"contextual.notes_unavailable": "Client priorities and commitments need direct confirmation"}
+  },
+  {
+    "client": "C017", "trigger": "upsell", "label": "Prior streaming rights objection",
+    "expect": {"commercial.opportunity.O-0014": "Lost - rights held by league", "contextual.gap.STREAM": "Closed Lost"}
+  }
+]

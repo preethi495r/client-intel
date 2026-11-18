@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "always": ["client_profile", "data_quality"],
+  "triggers": {
+    "renewal": {
+      "label": "Renewal",
+      "lead_heading": "Deadline and signature position",
+      "support_heading": "What to address before renewal",
+      "action_heading": "Next renewal conversation",
+      "objective": "Establish recorded term end, notice deadline and signature position. If there is no current signed term, lead with the last expired term and pending execution. Use CRM, usage, service and notes to decide what must be confirmed now.",
+      "core": ["contract_position", "renewal_calendar"],
+      "required_in_lead": [["renewal_calendar"], ["contract_position"]],
+      "support": ["opportunity_snapshot", "usage_trends", "support_summary", "meeting_context", "usage_history", "support_csat",
+                  "contract_reconciliation", "contract_changes", "opportunity_age", "proposal_comparison",
+                  "entitlement_utilisation", "overage_exposure", "support_resolution", "recorded_commitments",
+                  "renewal_execution_gaps", "contract_usage_reconciliation", "commercial_change_context", "coverage_inquiry"]
+    },
+    "meeting_prep": {
+      "label": "Meeting prep",
+      "lead_heading": "Developments to bring into the meeting",
+      "support_heading": "Context for the conversation",
+      "action_heading": "Questions for the meeting",
+      "objective": "Lead with recent decisions the rep can advance. Turn a documented client priority and an unresolved concern into specific agenda questions when both are present. Show both sources for a material discrepancy. Put urgent execution or open service issues first when warranted. Filter historical or resolved items to those that affect the next conversation.",
+      "core": ["meeting_context", "opportunity_snapshot", "contract_position", "support_summary"],
+      "required_in_lead": [["meeting_context", "opportunity_snapshot", "contract_position", "support_summary"]],
+      "support": ["renewal_calendar", "usage_trends", "support_csat", "usage_history",
+                  "recorded_commitments", "support_resolution", "opportunity_age", "proposal_comparison",
+                  "notes_record_discrepancies", "renewal_execution_gaps", "value_evidence_inquiry", "coverage_inquiry"]
+    },
+    "upsell": {
+      "label": "Upsell",
+      "lead_heading": "Growth opportunity and fit",
+      "support_heading": "Existing offers and constraints",
+      "action_heading": "Discovery and next steps",
+      "objective": "Lead with the best-supported growth candidate and its documented need or catalogue fit. Give the rep a specific discovery or demonstration action. Retain relevant open offers, prior objections and eligibility, rights or budget constraints. Lead with a commercial or service issue only when the evidence shows it remains unresolved and needs attention before a growth discussion.",
+      "core": ["product_gaps", "catalogue_relationships", "opportunity_snapshot"],
+      "required_in_lead": [["product_gaps", "catalogue_relationships"]],
+      "support": ["meeting_context", "contract_position", "usage_trends", "usage_history", "support_summary",
+                  "peer_holdings", "entitlement_utilisation", "overage_exposure", "opportunity_age", "recorded_commitments",
+                  "need_product_alignment", "prior_offer_context", "value_evidence_inquiry", "coverage_inquiry"]
+    },
+    "at_risk": {
+      "label": "At risk",
+      "lead_heading": "Retention signals",
+      "support_heading": "Service and commercial context",
+      "action_heading": "Retention conversation",
+      "objective": "Lead with the most material deterioration the data supports. Identify affected products and comparable periods. Give a specific next step for the most urgent unresolved service issue or observed product decline, with a question about its impact. Keep broader commercial follow-ups secondary unless the commercial deadline is urgent. A trigger or hunch alone supplies no evidence of decline or causation.",
+      "core": ["usage_trends", "support_summary", "contract_position"],
+      "required_in_lead": [["usage_trends", "support_summary"]],
+      "support": ["support_csat", "renewal_calendar", "opportunity_snapshot", "meeting_context", "usage_history",
+                  "entitlement_utilisation", "overage_exposure", "support_resolution", "opportunity_age",
+                  "contract_changes", "recorded_commitments", "decline_breakdown", "notes_record_discrepancies",
+                  "contract_usage_reconciliation", "renewal_execution_gaps", "coverage_inquiry"]
+    },
+    "service_review": {
+      "label": "Service review",
+      "lead_heading": "Open issues and service trends",
+      "support_heading": "Client and product context",
+      "action_heading": "Service follow-up",
+      "objective": "Lead with serious open cases and the recorded support trend. Summarise ticket priority, category and respondent-only satisfaction when relevant. Use meeting and usage evidence to choose a follow-up on impact or resolution, without inferring measured uptime or causation. When no issue is open, ask about client experience or confirm closure where relevant.",
+      "core": ["support_summary", "support_csat"],
+      "required_in_lead": [["support_summary"]],
+      "support": ["meeting_context", "usage_trends", "usage_history", "contract_position"]
+    }
+  }
+}

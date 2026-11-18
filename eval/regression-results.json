@@ -1,0 +1,854 @@
+{
+  "matrix_checked": 100,
+  "matrix": [
+    {
+      "client_id": "C001",
+      "trigger": "renewal",
+      "model_candidates": 30,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C001",
+      "trigger": "meeting_prep",
+      "model_candidates": 30,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C001",
+      "trigger": "upsell",
+      "model_candidates": 31,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C001",
+      "trigger": "at_risk",
+      "model_candidates": 30,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C002",
+      "trigger": "renewal",
+      "model_candidates": 24,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C002",
+      "trigger": "meeting_prep",
+      "model_candidates": 24,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C002",
+      "trigger": "upsell",
+      "model_candidates": 27,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C002",
+      "trigger": "at_risk",
+      "model_candidates": 24,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C003",
+      "trigger": "renewal",
+      "model_candidates": 19,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C003",
+      "trigger": "meeting_prep",
+      "model_candidates": 19,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C003",
+      "trigger": "upsell",
+      "model_candidates": 21,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C003",
+      "trigger": "at_risk",
+      "model_candidates": 19,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C004",
+      "trigger": "renewal",
+      "model_candidates": 14,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C004",
+      "trigger": "meeting_prep",
+      "model_candidates": 14,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C004",
+      "trigger": "upsell",
+      "model_candidates": 18,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C004",
+      "trigger": "at_risk",
+      "model_candidates": 14,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C005",
+      "trigger": "renewal",
+      "model_candidates": 20,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C005",
+      "trigger": "meeting_prep",
+      "model_candidates": 20,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C005",
+      "trigger": "upsell",
+      "model_candidates": 22,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C005",
+      "trigger": "at_risk",
+      "model_candidates": 20,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C006",
+      "trigger": "renewal",
+      "model_candidates": 18,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C006",
+      "trigger": "meeting_prep",
+      "model_candidates": 18,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C006",
+      "trigger": "upsell",
+      "model_candidates": 21,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C006",
+      "trigger": "at_risk",
+      "model_candidates": 18,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C007",
+      "trigger": "renewal",
+      "model_candidates": 21,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C007",
+      "trigger": "meeting_prep",
+      "model_candidates": 21,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C007",
+      "trigger": "upsell",
+      "model_candidates": 29,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C007",
+      "trigger": "at_risk",
+      "model_candidates": 21,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C008",
+      "trigger": "renewal",
+      "model_candidates": 17,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C008",
+      "trigger": "meeting_prep",
+      "model_candidates": 17,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C008",
+      "trigger": "upsell",
+      "model_candidates": 19,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C008",
+      "trigger": "at_risk",
+      "model_candidates": 17,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C009",
+      "trigger": "renewal",
+      "model_candidates": 20,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C009",
+      "trigger": "meeting_prep",
+      "model_candidates": 20,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C009",
+      "trigger": "upsell",
+      "model_candidates": 20,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C009",
+      "trigger": "at_risk",
+      "model_candidates": 20,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C010",
+      "trigger": "renewal",
+      "model_candidates": 18,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C010",
+      "trigger": "meeting_prep",
+      "model_candidates": 18,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C010",
+      "trigger": "upsell",
+      "model_candidates": 19,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C010",
+      "trigger": "at_risk",
+      "model_candidates": 18,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C011",
+      "trigger": "renewal",
+      "model_candidates": 18,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C011",
+      "trigger": "meeting_prep",
+      "model_candidates": 18,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C011",
+      "trigger": "upsell",
+      "model_candidates": 19,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C011",
+      "trigger": "at_risk",
+      "model_candidates": 18,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C012",
+      "trigger": "renewal",
+      "model_candidates": 13,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C012",
+      "trigger": "meeting_prep",
+      "model_candidates": 13,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C012",
+      "trigger": "upsell",
+      "model_candidates": 17,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C012",
+      "trigger": "at_risk",
+      "model_candidates": 13,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C013",
+      "trigger": "renewal",
+      "model_candidates": 18,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C013",
+      "trigger": "meeting_prep",
+      "model_candidates": 18,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C013",
+      "trigger": "upsell",
+      "model_candidates": 19,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C013",
+      "trigger": "at_risk",
+      "model_candidates": 18,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C014",
+      "trigger": "renewal",
+      "model_candidates": 13,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C014",
+      "trigger": "meeting_prep",
+      "model_candidates": 13,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C014",
+      "trigger": "upsell",
+      "model_candidates": 16,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C014",
+      "trigger": "at_risk",
+      "model_candidates": 13,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C015",
+      "trigger": "renewal",
+      "model_candidates": 15,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C015",
+      "trigger": "meeting_prep",
+      "model_candidates": 15,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C015",
+      "trigger": "upsell",
+      "model_candidates": 17,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C015",
+      "trigger": "at_risk",
+      "model_candidates": 15,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C016",
+      "trigger": "renewal",
+      "model_candidates": 17,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C016",
+      "trigger": "meeting_prep",
+      "model_candidates": 17,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C016",
+      "trigger": "upsell",
+      "model_candidates": 19,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C016",
+      "trigger": "at_risk",
+      "model_candidates": 17,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C017",
+      "trigger": "renewal",
+      "model_candidates": 15,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C017",
+      "trigger": "meeting_prep",
+      "model_candidates": 15,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C017",
+      "trigger": "upsell",
+      "model_candidates": 17,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C017",
+      "trigger": "at_risk",
+      "model_candidates": 15,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C018",
+      "trigger": "renewal",
+      "model_candidates": 14,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C018",
+      "trigger": "meeting_prep",
+      "model_candidates": 14,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C018",
+      "trigger": "upsell",
+      "model_candidates": 16,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C018",
+      "trigger": "at_risk",
+      "model_candidates": 14,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C019",
+      "trigger": "renewal",
+      "model_candidates": 17,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C019",
+      "trigger": "meeting_prep",
+      "model_candidates": 17,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C019",
+      "trigger": "upsell",
+      "model_candidates": 19,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C019",
+      "trigger": "at_risk",
+      "model_candidates": 17,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C020",
+      "trigger": "renewal",
+      "model_candidates": 16,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C020",
+      "trigger": "meeting_prep",
+      "model_candidates": 16,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C020",
+      "trigger": "upsell",
+      "model_candidates": 18,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C020",
+      "trigger": "at_risk",
+      "model_candidates": 16,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C021",
+      "trigger": "renewal",
+      "model_candidates": 14,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C021",
+      "trigger": "meeting_prep",
+      "model_candidates": 14,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C021",
+      "trigger": "upsell",
+      "model_candidates": 17,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C021",
+      "trigger": "at_risk",
+      "model_candidates": 14,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C022",
+      "trigger": "renewal",
+      "model_candidates": 13,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C022",
+      "trigger": "meeting_prep",
+      "model_candidates": 13,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C022",
+      "trigger": "upsell",
+      "model_candidates": 16,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C022",
+      "trigger": "at_risk",
+      "model_candidates": 13,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C023",
+      "trigger": "renewal",
+      "model_candidates": 15,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C023",
+      "trigger": "meeting_prep",
+      "model_candidates": 15,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C023",
+      "trigger": "upsell",
+      "model_candidates": 16,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C023",
+      "trigger": "at_risk",
+      "model_candidates": 15,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C024",
+      "trigger": "renewal",
+      "model_candidates": 18,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C024",
+      "trigger": "meeting_prep",
+      "model_candidates": 18,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C024",
+      "trigger": "upsell",
+      "model_candidates": 18,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C024",
+      "trigger": "at_risk",
+      "model_candidates": 18,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C025",
+      "trigger": "renewal",
+      "model_candidates": 17,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C025",
+      "trigger": "meeting_prep",
+      "model_candidates": 17,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C025",
+      "trigger": "upsell",
+      "model_candidates": 18,
+      "planned_analyses": 10
+    },
+    {
+      "client_id": "C025",
+      "trigger": "at_risk",
+      "model_candidates": 17,
+      "planned_analyses": 10
+    }
+  ],
+  "fixtures": [
+    {
+      "sample_request": "R1",
+      "client_id": "C001",
+      "trigger": "at_risk",
+      "evidence_bundle_available": true
+    },
+    {
+      "sample_request": "R2",
+      "client_id": "C002",
+      "trigger": "upsell",
+      "evidence_bundle_available": true
+    },
+    {
+      "sample_request": "R3",
+      "client_id": "C003",
+      "trigger": "meeting_prep",
+      "evidence_bundle_available": true
+    },
+    {
+      "sample_request": "R4",
+      "client_id": "C011",
+      "trigger": "renewal",
+      "evidence_bundle_available": true
+    },
+    {
+      "sample_request": "R5",
+      "client_id": "C009",
+      "trigger": "upsell",
+      "evidence_bundle_available": true
+    },
+    {
+      "case": "Brenmoor note and record scopes",
+      "client_id": "C003",
+      "trigger": "meeting_prep",
+      "checked_evidence": [
+        "contextual.note.N-006.6.140",
+        "contextual.note.N-006.6.300",
+        "telemetry.usage.STREAM.yoy",
+        "commercial.opportunity.O-0003"
+      ]
+    },
+    {
+      "case": "Quillon short history",
+      "client_id": "C004",
+      "trigger": "at_risk",
+      "checked_evidence": [
+        "telemetry.usage.LIVE_DATA.yoy"
+      ]
+    },
+    {
+      "case": "Marrowfield missing month outside comparison",
+      "client_id": "C005",
+      "trigger": "at_risk",
+      "checked_evidence": [
+        "telemetry.usage.STREAM.coverage_gap",
+        "telemetry.usage.STREAM.yoy"
+      ]
+    },
+    {
+      "case": "Tidewell duplicate contract and usage",
+      "client_id": "C006",
+      "trigger": "renewal",
+      "checked_evidence": [
+        "commercial.rows.contracts.K-0010",
+        "telemetry.usage.LIVE_DATA.duplicates"
+      ]
+    },
+    {
+      "case": "Saltmarsh duplicate ticket",
+      "client_id": "C010",
+      "trigger": "at_risk",
+      "checked_evidence": [
+        "telemetry.support.T-0281.duplicate"
+      ]
+    },
+    {
+      "case": "Account without meeting notes",
+      "client_id": "C014",
+      "trigger": "meeting_prep",
+      "checked_evidence": [
+        "contextual.notes_unavailable"
+      ]
+    },
+    {
+      "case": "Prior streaming rights objection",
+      "client_id": "C017",
+      "trigger": "upsell",
+      "checked_evidence": [
+        "commercial.opportunity.O-0014",
+        "contextual.gap.STREAM"
+      ]
+    }
+  ],
+  "distinct_sample_and_edge_requests": 11,
+  "independent_source_checks": {
+    "C001": {
+      "notice_deadline": "2026-12-02",
+      "signed_arr_eur": 752000,
+      "usage": {
+        "ODDS_LIVE": {
+          "recent": 3331,
+          "baseline": 5549,
+          "yoy_percent": -40.0
+        },
+        "LIVE_DATA": {
+          "recent": 14267,
+          "baseline": 22394,
+          "yoy_percent": -36.3
+        }
+      },
+      "csat": {
+        "responses": 4,
+        "average": 1.25
+      }
+    },
+    "C004": {
+      "months": [
+        "2026-09",
+        "2026-10"
+      ],
+      "yoy_percentage_withheld": true
+    },
+    "C005": {
+      "missing_month": "2026-03"
+    },
+    "C006": {
+      "signed_arr_eur": 176000,
+      "contract_occurrences": [
+        10,
+        46
+      ],
+      "usage_ids": [
+        "U-00422",
+        "U-01991"
+      ]
+    },
+    "C007": {
+      "draft_arr_eur": 200000,
+      "executed_coverage_confirmed": false,
+      "historical_notice_deadline": "2026-07-02"
+    },
+    "C010": {
+      "duplicate_ticket": "T-0281",
+      "physical_occurrences": 2
+    }
+  },
+  "live_runs": [
+    {
+      "request": {
+        "client": "Halden Bet",
+        "trigger": "at_risk",
+        "rep_context": "Usage feels down and they have been complaining. How worried should I be?"
+      },
+      "status": "verified_with_gaps",
+      "artifacts": "C001_at_risk_e741c5f57e9e"
+    },
+    {
+      "request": {
+        "client": "Corvane Media",
+        "trigger": "upsell",
+        "rep_context": "Seeing their head of digital next week. What could we grow?"
+      },
+      "status": "verified_with_gaps",
+      "artifacts": "C002_upsell_38b43b39cea8"
+    },
+    {
+      "request": {
+        "client": "Brenmoor League",
+        "trigger": "meeting_prep",
+        "rep_context": "Lunch with their commercial director to close the renewal."
+      },
+      "status": "verified_with_gaps",
+      "artifacts": "C003_meeting_prep_2c489d382c47",
+      "retry_of": "C003_meeting_prep_0327902c3959"
+    },
+    {
+      "request": {
+        "client": "Oakhurst Cricket Board",
+        "trigger": "renewal",
+        "rep_context": "Renewal proposal goes out this month."
+      },
+      "status": "verified_with_gaps",
+      "artifacts": "C011_renewal_57ff231df6ae"
+    },
+    {
+      "request": {
+        "client": "C009",
+        "trigger": "upsell",
+        "rep_context": "They are growing fast. What should I pitch?"
+      },
+      "status": "verified_with_gaps",
+      "artifacts": "C009_upsell_24d45f27c9b6"
+    },
+    {
+      "request": {
+        "client": "C004",
+        "trigger": "at_risk",
+        "rep_context": ""
+      },
+      "status": "verified_with_gaps",
+      "artifacts": "C004_at_risk_8af8c53e4001"
+    },
+    {
+      "request": {
+        "client": "C005",
+        "trigger": "at_risk",
+        "rep_context": ""
+      },
+      "status": "verified_with_gaps",
+      "artifacts": "C005_at_risk_e7b79e28e211"
+    },
+    {
+      "request": {
+        "client": "C006",
+        "trigger": "renewal",
+        "rep_context": ""
+      },
+      "status": "verified_with_gaps",
+      "artifacts": "C006_renewal_8233c5010a0a"
+    },
+    {
+      "request": {
+        "client": "C010",
+        "trigger": "at_risk",
+        "rep_context": ""
+      },
+      "status": "verified_with_gaps",
+      "artifacts": "C010_at_risk_625ec5cd2fbc"
+    },
+    {
+      "request": {
+        "client": "C014",
+        "trigger": "meeting_prep",
+        "rep_context": ""
+      },
+      "status": "verified_with_gaps",
+      "artifacts": "C014_meeting_prep_1071c0e85b23"
+    },
+    {
+      "request": {
+        "client": "C017",
+        "trigger": "upsell",
+        "rep_context": ""
+      },
+      "status": "verified_with_gaps",
+      "artifacts": "C017_upsell_7ce2f1def43d"
+    }
+  ]
+}

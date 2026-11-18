@@ -1,0 +1,144 @@
+{
+  "independent_source_checks": {
+    "C001": {
+      "notice_deadline": "2026-12-02",
+      "signed_arr_eur": 752000,
+      "usage": {
+        "ODDS_LIVE": {
+          "recent": 3331,
+          "baseline": 5549,
+          "yoy_percent": -40.0
+        },
+        "LIVE_DATA": {
+          "recent": 14267,
+          "baseline": 22394,
+          "yoy_percent": -36.3
+        }
+      },
+      "csat": {
+        "responses": 4,
+        "average": 1.25
+      }
+    },
+    "C004": {
+      "months": [
+        "2026-09",
+        "2026-10"
+      ],
+      "yoy_percentage_withheld": true
+    },
+    "C005": {
+      "missing_month": "2026-03"
+    },
+    "C006": {
+      "signed_arr_eur": 176000,
+      "contract_occurrences": [
+        10,
+        46
+      ],
+      "usage_ids": [
+        "U-00422",
+        "U-01991"
+      ]
+    },
+    "C007": {
+      "draft_arr_eur": 200000,
+      "executed_coverage_confirmed": false,
+      "historical_notice_deadline": "2026-07-02"
+    },
+    "C010": {
+      "duplicate_ticket": "T-0281",
+      "physical_occurrences": 2
+    }
+  },
+  "runs": {
+    "c001_at_risk": {
+      "status": "verified_with_gaps",
+      "claims": 14,
+      "actions": 2,
+      "draft_checks": []
+    },
+    "c001_renewal": {
+      "status": "verified_with_gaps",
+      "claims": 13,
+      "actions": 2,
+      "draft_checks": []
+    },
+    "c002_upsell": {
+      "status": "verified_with_gaps",
+      "claims": 15,
+      "actions": 2,
+      "draft_checks": []
+    },
+    "c002_meeting_prep": {
+      "status": "verified_with_gaps",
+      "claims": 15,
+      "actions": 2,
+      "draft_checks": []
+    },
+    "c007_renewal": {
+      "status": "verified_with_gaps",
+      "claims": 14,
+      "actions": 2,
+      "draft_checks": []
+    },
+    "c007_meeting_prep": {
+      "status": "verified_with_gaps",
+      "claims": 16,
+      "actions": 2,
+      "draft_checks": []
+    }
+  },
+  "fault_injections": {
+    "rendered_number": [
+      {
+        "check": "rendered_unbound_number",
+        "target": "lead.1",
+        "text": "The most recent confirmed signed term, K-0011, ended on 2026-09-30, 32 days before the snapshot. That term's recorded notice deadline was 2026-07-02. The available records show no signed term covering the snapshot. 987654321",
+        "evidence_keys": [
+          "commercial.elapsed.K-0011"
+        ],
+        "severity": "critical"
+      },
+      {
+        "check": "rendered_text_mismatch",
+        "target": "lead.1",
+        "text": "The most recent confirmed signed term, K-0011, ended on 2026-09-30, 32 days before the snapshot. That term's recorded notice deadline was 2026-07-02. The available records show no signed term covering the snapshot. 987654321",
+        "evidence_keys": [
+          "commercial.elapsed.K-0011"
+        ],
+        "severity": "critical"
+      }
+    ],
+    "rendered_missing_citation": [
+      {
+        "check": "rendered_missing_or_invalid_citation",
+        "target": "lead.1",
+        "text": "- The most recent confirmed signed term, K-0011, ended on 2026-09-30, 32 days before the snapshot. That term's recorded notice deadline was 2026-07-02. The available records show no signed term covering the snapshot.",
+        "evidence_keys": [
+          "commercial.elapsed.K-0011"
+        ],
+        "severity": "critical"
+      }
+    ],
+    "draft_rejections": [
+      {
+        "check": "unbound_number",
+        "target": "action.1",
+        "text": "Ask whether the budget is 987654321?",
+        "evidence_keys": [
+          "profile.account"
+        ],
+        "severity": "critical"
+      },
+      {
+        "check": "unresolved_or_missing_citation",
+        "target": "action.2",
+        "text": "Ask about budget.",
+        "evidence_keys": [],
+        "severity": "critical"
+      }
+    ],
+    "cited_second_screen_action_allowed": true
+  }
+}

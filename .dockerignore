@@ -1,0 +1,10 @@
+*
+!pyproject.toml
+!requirements-web.lock
+!client_intel/
+!client_intel/**
+!eval/
+!eval/requests.json
+**/__pycache__/
+**/*.pyc
+**/.env

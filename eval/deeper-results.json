@@ -1,0 +1,32 @@
+{
+  "C001": {
+    "proposal_minus_signed_eur": -210500,
+    "open_p1_elapsed_days": 11
+  },
+  "C002": {
+    "calculated_streaming_exposure_eur": 42130,
+    "widget_peers": [
+      4,
+      5
+    ]
+  },
+  "C003": {
+    "question": "Do the meeting account and measured trend cover the same population, dates and units?",
+    "conclusion": "insufficient_evidence",
+    "missing": "The note does not establish the same comparison population, months and units as the export.",
+    "supporting_evidence_keys": [
+      "contextual.note.N-006.6.140"
+    ],
+    "counterevidence_keys": [
+      "telemetry.usage.STREAM.yoy"
+    ],
+    "decision_basis": "Opposite directions on a named product; note scope remains unverified.",
+    "product_id": "STREAM",
+    "period": "Aug 2026 through Oct 2026 vs Aug 2025 through Oct 2025"
+  },
+  "C007": {
+    "assessed_months": 2,
+    "window_months": 3,
+    "full_period_exposure": null
+  }
+}

@@ -1,0 +1,692 @@
+{
+  "version": 2,
+  "scope": [
+    "descriptive",
+    "inquisitive"
+  ],
+  "analyses": [
+    {
+      "id": "client_profile",
+      "family": "Account context",
+      "kind": "descriptive",
+      "question": "What is the recorded account profile?",
+      "availability": "supported",
+      "sources": [
+        "clients"
+      ],
+      "qualification": "Complete basic attributes; informal aliases need ambiguity handling.",
+      "additional_data": "Contact IDs, account hierarchy and an alias register.",
+      "implementation_status": "planned"
+    },
+    {
+      "id": "data_quality",
+      "family": "Data trust",
+      "kind": "descriptive",
+      "question": "What gaps, duplicates and conflicts affect this answer?",
+      "availability": "supported",
+      "sources": [
+        "all sources"
+      ],
+      "qualification": "Preserve raw rows and distinguish absent, zero and not applicable.",
+      "additional_data": "Source completeness controls and correction logs.",
+      "implementation_status": "planned"
+    },
+    {
+      "id": "contract_position",
+      "family": "Contracts",
+      "kind": "descriptive",
+      "question": "Which signed contracts and products are recorded in force?",
+      "availability": "supported",
+      "sources": [
+        "contracts",
+        "contract_lines"
+      ],
+      "qualification": "Keep signed, expired and proposed holdings separate.",
+      "additional_data": "Executed amendments, notices and interim agreements.",
+      "implementation_status": "planned",
+      "suggestion_use": "Ground a scope or renewal discussion in signed holdings; distinguish a suggestion from an executed agreement."
+    },
+    {
+      "id": "renewal_calendar",
+      "family": "Contracts",
+      "kind": "descriptive",
+      "question": "What are the recorded term dates and calculated notice deadlines?",
+      "availability": "qualified",
+      "sources": [
+        "contracts"
+      ],
+      "qualification": "No notice register: an elapsed deadline does not establish that notice was not sent.",
+      "additional_data": "Notice, waiver and renewal execution records.",
+      "implementation_status": "planned",
+      "suggestion_use": "Explain why a renewal discussion is timely using recorded dates, while retaining uncertainty about notices."
+    },
+    {
+      "id": "contract_reconciliation",
+      "family": "Revenue",
+      "kind": "descriptive",
+      "question": "Do recorded ARR and product line fees reconcile?",
+      "availability": "supported",
+      "sources": [
+        "contracts",
+        "contract_lines"
+      ],
+      "qualification": "Deduplicate contracts; this establishes recorded fees, not realised revenue.",
+      "additional_data": "Billing and amendment ledger for commercial reconciliation.",
+      "implementation_status": "planned"
+    },
+    {
+      "id": "contract_changes",
+      "family": "Revenue",
+      "kind": "descriptive",
+      "question": "How did recorded fees, products and allowances change between terms?",
+      "availability": "qualified",
+      "sources": [
+        "contracts",
+        "contract_lines"
+      ],
+      "qualification": "History is partial; decompose recorded changes without attributing a pure price effect.",
+      "additional_data": "Full effective-dated subscription and amendment history.",
+      "implementation_status": "planned"
+    },
+    {
+      "id": "usage_history",
+      "family": "Usage",
+      "kind": "descriptive",
+      "question": "What monthly consumption is observed for each product?",
+      "availability": "supported",
+      "sources": [
+        "usage_monthly",
+        "products"
+      ],
+      "qualification": "Different product units cannot be added; monthly active users are not distinct quarterly users.",
+      "additional_data": "Missing metering observations and measurement change history.",
+      "implementation_status": "planned"
+    },
+    {
+      "id": "usage_trends",
+      "family": "Usage",
+      "kind": "descriptive",
+      "question": "How has observed usage changed over comparable periods?",
+      "availability": "qualified",
+      "sources": [
+        "usage_monthly",
+        "products"
+      ],
+      "qualification": "Require comparable coverage; Quillon lacks annual history and Marrowfield lacks March.",
+      "additional_data": "Missing months and longer comparable history.",
+      "implementation_status": "planned",
+      "suggestion_use": "Use observed product-specific change to motivate a discussion; do not extrapolate demand or expected revenue."
+    },
+    {
+      "id": "usage_exceptions",
+      "family": "Usage",
+      "kind": "descriptive",
+      "question": "Which observed months or products depart from an explicit historical baseline?",
+      "availability": "exploratory",
+      "sources": [
+        "usage_monthly",
+        "products"
+      ],
+      "qualification": "Historical exception detection only; thresholds and baseline must be stated and checked.",
+      "additional_data": "Longer history, sporting calendars and measurement change logs.",
+      "implementation_status": "planned"
+    },
+    {
+      "id": "entitlement_utilisation",
+      "family": "Entitlements",
+      "kind": "descriptive",
+      "question": "Where is observed consumption above or below a known allowance?",
+      "availability": "qualified",
+      "sources": [
+        "usage_monthly",
+        "contracts",
+        "contract_lines"
+      ],
+      "qualification": "Match effective signed terms; Varrow October has unknown entitlements.",
+      "additional_data": "Executed amendments and interim entitlement terms.",
+      "implementation_status": "planned",
+      "suggestion_use": "Support discussion of allowance fit using repeated observed pressure or underuse and known signed terms."
+    },
+    {
+      "id": "overage_exposure",
+      "family": "Entitlements",
+      "kind": "descriptive",
+      "question": "What excess consumption and charge exposure follow from recorded terms?",
+      "availability": "qualified",
+      "sources": [
+        "usage_monthly",
+        "contracts",
+        "contract_lines"
+      ],
+      "qualification": "Calculated exposure is not an invoice; missing signed terms block the affected period.",
+      "additional_data": "Invoices, credits, waivers and effective-dated rates.",
+      "implementation_status": "planned",
+      "suggestion_use": "Explain an allowance review with observed excess use and calculated exposure; do not promise savings or quote unverified charges."
+    },
+    {
+      "id": "support_summary",
+      "family": "Support",
+      "kind": "descriptive",
+      "question": "What issues, priorities and open tickets are recorded?",
+      "availability": "supported",
+      "sources": [
+        "support_tickets"
+      ],
+      "qualification": "Deduplicate; absence of tickets means none recorded in this export.",
+      "additional_data": "Complete service coverage and incident links.",
+      "implementation_status": "planned",
+      "suggestion_use": "Justify a service-resolution follow-up or caution around a commercial pitch using recorded issues."
+    },
+    {
+      "id": "support_resolution",
+      "family": "Support",
+      "kind": "descriptive",
+      "question": "How old are open tickets and how long did closed tickets take?",
+      "availability": "qualified",
+      "sources": [
+        "support_tickets"
+      ],
+      "qualification": "Elapsed calendar days only; distinguish closed cases from still-open cases.",
+      "additional_data": "Response/status events, SLA definitions and business calendars.",
+      "implementation_status": "planned"
+    },
+    {
+      "id": "support_csat",
+      "family": "Support",
+      "kind": "descriptive",
+      "question": "What satisfaction responses are recorded and how complete are they?",
+      "availability": "qualified",
+      "sources": [
+        "support_tickets"
+      ],
+      "qualification": "Show response count and closed-ticket denominator; no neutral fill for blanks.",
+      "additional_data": "Survey timing, response coverage and broader feedback.",
+      "implementation_status": "planned"
+    },
+    {
+      "id": "opportunity_snapshot",
+      "family": "CRM",
+      "kind": "descriptive",
+      "question": "What opportunities, values, stages and next steps are recorded?",
+      "availability": "supported",
+      "sources": [
+        "crm_opportunities"
+      ],
+      "qualification": "CRM values are proposed/recorded values, not executed contracts or revenue.",
+      "additional_data": "Linked signed contracts and complete opportunity coverage.",
+      "implementation_status": "planned"
+    },
+    {
+      "id": "opportunity_age",
+      "family": "CRM",
+      "kind": "descriptive",
+      "question": "How old are opportunities and which expected close dates have elapsed?",
+      "availability": "qualified",
+      "sources": [
+        "crm_opportunities"
+      ],
+      "qualification": "Age since creation is available; stage age and date slippage are not.",
+      "additional_data": "Stage and expected-close histories plus actual close dates.",
+      "implementation_status": "planned"
+    },
+    {
+      "id": "meeting_context",
+      "family": "Meetings",
+      "kind": "descriptive",
+      "question": "What goals, objections and competitor or budget statements were recorded?",
+      "availability": "qualified",
+      "sources": [
+        "meeting_notes_index",
+        "meeting_notes"
+      ],
+      "qualification": "Attributed statements from 14 notes covering ten clients; no inference from missing notes.",
+      "additional_data": "Broader dated notes, transcripts and contact identities.",
+      "implementation_status": "planned",
+      "suggestion_use": "Connect an action to attributed, dated client priorities; retain stale or contradictory statements."
+    },
+    {
+      "id": "recorded_commitments",
+      "family": "Meetings",
+      "kind": "descriptive",
+      "question": "What actions, owners and deadlines are explicitly recorded?",
+      "availability": "qualified",
+      "sources": [
+        "meeting_notes",
+        "crm_opportunities"
+      ],
+      "qualification": "Missing completion status means unknown; suggested follow-ups stay separate from recorded commitments.",
+      "additional_data": "Tracked tasks with due dates and completion evidence.",
+      "implementation_status": "planned",
+      "suggestion_use": "Distinguish following up an existing commitment from proposing a new action, with completion status qualified."
+    },
+    {
+      "id": "product_gaps",
+      "family": "White space",
+      "kind": "descriptive",
+      "question": "Which catalogue products are absent from signed current holdings?",
+      "availability": "qualified",
+      "sources": [
+        "contracts",
+        "contract_lines",
+        "products",
+        "usage_monthly"
+      ],
+      "qualification": "Keep former, consumed and proposed products visible, especially for an unsigned renewal.",
+      "additional_data": "Effective entitlements, external holdings and rights/eligibility records.",
+      "implementation_status": "planned"
+    },
+    {
+      "id": "catalogue_relationships",
+      "family": "White space",
+      "kind": "descriptive",
+      "question": "What prerequisites, typical segments and product relationships are documented?",
+      "availability": "supported",
+      "sources": [
+        "products"
+      ],
+      "qualification": "Catalogue fit is contextual evidence, not proof of client need or permission to sell.",
+      "additional_data": "Detailed eligibility, territories, competitions and licensing rules.",
+      "implementation_status": "planned",
+      "suggestion_use": "Explain which documented capability or prerequisite connects a candidate product to the client need."
+    },
+    {
+      "id": "peer_holdings",
+      "family": "Peers",
+      "kind": "descriptive",
+      "question": "What do explicitly defined comparable accounts hold?",
+      "availability": "qualified",
+      "sources": [
+        "clients",
+        "contracts",
+        "contract_lines"
+      ],
+      "qualification": "Exclude the target and publish numerator/denominator; cohorts contain very few peers.",
+      "additional_data": "Larger representative population and account-scale/use-case attributes.",
+      "implementation_status": "planned",
+      "suggestion_use": "Provide secondary context with cohort counts; peer adoption alone cannot establish client need."
+    },
+    {
+      "id": "proposal_comparison",
+      "family": "Commercial position",
+      "kind": "descriptive",
+      "question": "How does a recorded proposal differ from the recorded signed position?",
+      "availability": "qualified",
+      "sources": [
+        "crm_opportunities",
+        "contracts",
+        "contract_lines"
+      ],
+      "qualification": "Describe proposal arithmetic; do not forecast acceptance, loss or future revenue.",
+      "additional_data": "Quote line details and links to executed amendments.",
+      "implementation_status": "planned"
+    },
+    {
+      "id": "portfolio_snapshot",
+      "family": "Portfolio",
+      "kind": "descriptive",
+      "question": "How are recorded ARR, renewal dates, products and issues distributed?",
+      "availability": "qualified",
+      "sources": [
+        "clients",
+        "contracts",
+        "contract_lines",
+        "support_tickets"
+      ],
+      "qualification": "Sorting by recorded dates/values is descriptive; composite churn or growth scores are excluded.",
+      "additional_data": "Complete revenue coverage, account hierarchy and workload/time records.",
+      "implementation_status": "planned"
+    },
+    {
+      "id": "decline_breakdown",
+      "family": "Usage investigation",
+      "kind": "inquisitive",
+      "question": "Is a decline concentrated in particular products or periods, and is it a coverage artefact?",
+      "availability": "qualified",
+      "sources": [
+        "usage_monthly",
+        "products",
+        "data_quality"
+      ],
+      "qualification": "Compare within product and check missingness; do not add unlike units or assert a cause.",
+      "additional_data": "Granular consumption, measurement logs and client operating context.",
+      "implementation_status": "planned"
+    },
+    {
+      "id": "seasonal_context",
+      "family": "Usage investigation",
+      "kind": "inquisitive",
+      "question": "Does a change persist against the same months last year or reflect a historical seasonal pattern?",
+      "availability": "exploratory",
+      "sources": [
+        "usage_monthly"
+      ],
+      "qualification": "At most two annual cycles; historical comparisons can challenge a hypothesis but cannot establish seasonality reliably.",
+      "additional_data": "More comparable historical seasons and sporting/event calendars.",
+      "implementation_status": "planned"
+    },
+    {
+      "id": "support_usage_alignment",
+      "family": "Service investigation",
+      "kind": "inquisitive",
+      "question": "Do observed usage changes coincide with reported service issues?",
+      "availability": "exploratory",
+      "sources": [
+        "usage_monthly",
+        "support_tickets",
+        "meeting_notes"
+      ],
+      "qualification": "Temporal association only; monthly resolution and incomplete incident exposure limit conclusions.",
+      "additional_data": "Daily usage, incident timelines, affected-client links and root-cause reports.",
+      "implementation_status": "planned"
+    },
+    {
+      "id": "notes_record_discrepancies",
+      "family": "Evidence investigation",
+      "kind": "inquisitive",
+      "question": "Do dated narrative statements agree with structured records on comparable scopes and periods?",
+      "availability": "qualified",
+      "sources": [
+        "meeting_notes",
+        "usage_monthly",
+        "contracts",
+        "crm_opportunities"
+      ],
+      "qualification": "Differences become clarification questions; dates, attribution and scope must be checked first.",
+      "additional_data": "Definitions of quoted metrics and source-owner clarification.",
+      "implementation_status": "planned"
+    },
+    {
+      "id": "contract_usage_reconciliation",
+      "family": "Entitlement investigation",
+      "kind": "inquisitive",
+      "question": "Why does observed consumption lack matching signed coverage or an allowance?",
+      "availability": "qualified",
+      "sources": [
+        "contracts",
+        "contract_lines",
+        "usage_monthly",
+        "meeting_notes"
+      ],
+      "qualification": "Identify the specific missing link; do not infer churn, unauthorised use or unrecorded terms.",
+      "additional_data": "Signed interim arrangements, provisioning records and amendments.",
+      "implementation_status": "planned",
+      "suggestion_use": "Support clarification of signed coverage before suggesting changes to entitlements or billing."
+    },
+    {
+      "id": "need_product_alignment",
+      "family": "White space investigation",
+      "kind": "inquisitive",
+      "question": "Which unheld products match documented needs, and what constraints or counterevidence exist?",
+      "availability": "qualified",
+      "sources": [
+        "products",
+        "contracts",
+        "contract_lines",
+        "meeting_notes",
+        "crm_opportunities"
+      ],
+      "qualification": "Fit evidence may support a sales suggestion with a displayed cited rationale, constraints and validation questions; no purchase propensity or optimal-product claim.",
+      "additional_data": "Confirmed requirements, alternative solutions, eligibility and budgets.",
+      "implementation_status": "planned",
+      "suggestion_use": "Support a product discussion with cited client needs, capability fit, counterevidence and questions to validate eligibility."
+    },
+    {
+      "id": "prior_offer_context",
+      "family": "White space investigation",
+      "kind": "inquisitive",
+      "question": "What do open, won or lost offers reveal about a proposed product discussion?",
+      "availability": "qualified",
+      "sources": [
+        "crm_opportunities",
+        "meeting_notes"
+      ],
+      "qualification": "Observed loss reasons and statements need attribution; absence of a deal is not rejection.",
+      "additional_data": "Complete offer history, dated loss reasons and subsequent client feedback.",
+      "implementation_status": "planned",
+      "suggestion_use": "Show why an earlier objection or open offer strengthens, qualifies or blocks a suggestion; explain why some candidates are withheld."
+    },
+    {
+      "id": "renewal_execution_gaps",
+      "family": "Renewal investigation",
+      "kind": "inquisitive",
+      "question": "What is unresolved between renewal discussions, CRM state and executed records?",
+      "availability": "qualified",
+      "sources": [
+        "contracts",
+        "crm_opportunities",
+        "meeting_notes"
+      ],
+      "qualification": "An agreement described in a note is not an executed renewal.",
+      "additional_data": "Board/legal approvals, notices, signature status and linked executed documents.",
+      "implementation_status": "planned",
+      "suggestion_use": "Explain why confirmation of execution or interim terms should precede assumptions about the renewal position."
+    },
+    {
+      "id": "commercial_change_context",
+      "family": "Commercial investigation",
+      "kind": "inquisitive",
+      "question": "What recorded changes in scope, allowance, fees or client statements explain a proposal difference?",
+      "availability": "qualified",
+      "sources": [
+        "contracts",
+        "contract_lines",
+        "crm_opportunities",
+        "meeting_notes"
+      ],
+      "qualification": "Report supported components and unknowns; no inferred willingness to pay or price elasticity.",
+      "additional_data": "Line-level quotes, scope versions, negotiation history and approved pricing.",
+      "implementation_status": "planned",
+      "suggestion_use": "Support a scope or pricing conversation using recorded proposal differences and explanations, without an optimal-price claim."
+    },
+    {
+      "id": "value_evidence_inquiry",
+      "family": "Value investigation",
+      "kind": "inquisitive",
+      "question": "Which claimed client benefits are measured and which remain unverified?",
+      "availability": "qualified",
+      "sources": [
+        "meeting_notes",
+        "usage_monthly",
+        "products"
+      ],
+      "qualification": "Usage and client statements support questions, not verified financial value or causal ROI.",
+      "additional_data": "Agreed success criteria and linked business-outcome measurements.",
+      "implementation_status": "planned",
+      "suggestion_use": "Explain which client benefit should be validated before using it in an upsell or renewal suggestion."
+    },
+    {
+      "id": "coverage_inquiry",
+      "family": "Data investigation",
+      "kind": "inquisitive",
+      "question": "Which missing or inconsistent records could change the interpretation?",
+      "availability": "qualified",
+      "sources": [
+        "all sources"
+      ],
+      "qualification": "Separate demonstrated data defects from unproven explanations for those defects.",
+      "additional_data": "Source ownership, ingestion logs, backfills and adjudicated corrections.",
+      "implementation_status": "planned"
+    },
+    {
+      "id": "stakeholder_coverage",
+      "family": "Relationships",
+      "kind": "descriptive",
+      "question": "Which decision makers and relationship contacts are covered by interactions?",
+      "availability": "blocked",
+      "sources": [
+        "contact_directory",
+        "interaction_history"
+      ],
+      "qualification": "Sparse roles in notes do not establish comprehensive coverage.",
+      "additional_data": "Contact IDs, decision roles, buying authority and dated interaction history.",
+      "implementation_status": "planned"
+    },
+    {
+      "id": "billing_and_margin",
+      "family": "Financial actuals",
+      "kind": "descriptive",
+      "question": "What was billed, paid, credited and spent serving the account?",
+      "availability": "blocked",
+      "sources": [
+        "billing_ledger",
+        "payments",
+        "cost_allocations"
+      ],
+      "qualification": "Contract fees and catalogue entry prices do not establish realised revenue, discounts or margin.",
+      "additional_data": "Linked invoices, credits, payments, comparable list prices and delivery/support costs.",
+      "implementation_status": "planned"
+    },
+    {
+      "id": "activation_and_features",
+      "family": "Adoption",
+      "kind": "descriptive",
+      "question": "When did activation happen and which users, integrations and features are active?",
+      "availability": "blocked",
+      "sources": [
+        "provisioning",
+        "onboarding",
+        "feature_events"
+      ],
+      "qualification": "First observed export usage is not necessarily activation.",
+      "additional_data": "Provisioning and onboarding milestones, user/feature events and integration history.",
+      "implementation_status": "planned"
+    },
+    {
+      "id": "measured_reliability",
+      "family": "Reliability",
+      "kind": "descriptive",
+      "question": "What availability, latency and SLA performance were actually measured?",
+      "availability": "blocked",
+      "sources": [
+        "service_telemetry",
+        "incident_history",
+        "sla_rules"
+      ],
+      "qualification": "Ticket subjects are reports, not measured uptime or verified incident exposure.",
+      "additional_data": "Client/product telemetry, incident timelines, SLA rules and business calendars.",
+      "implementation_status": "planned"
+    },
+    {
+      "id": "workflow_history",
+      "family": "Workflow",
+      "kind": "descriptive",
+      "question": "What were actual response times, reopens, sales stage durations and close-date changes?",
+      "availability": "blocked",
+      "sources": [
+        "ticket_events",
+        "crm_events"
+      ],
+      "qualification": "Current snapshots cannot reconstruct missing transitions.",
+      "additional_data": "Ticket status/response events and CRM field-change history with actual closes.",
+      "implementation_status": "planned"
+    },
+    {
+      "id": "business_outcomes",
+      "family": "Client outcomes",
+      "kind": "descriptive",
+      "question": "What business results and agreed success metrics did the client actually record?",
+      "availability": "blocked",
+      "sources": [
+        "client_outcomes",
+        "success_criteria"
+      ],
+      "qualification": "Avoid attributing economic benefit to product usage alone.",
+      "additional_data": "Outcome measures, comparable baselines and agreed metric definitions.",
+      "implementation_status": "planned"
+    },
+    {
+      "id": "market_and_competitors",
+      "family": "Competition",
+      "kind": "descriptive",
+      "question": "What dated competitor, territory and market facts are recorded?",
+      "availability": "blocked",
+      "sources": [
+        "market_records",
+        "competitive_research"
+      ],
+      "qualification": "Notes contain partial attributed signals; they do not establish market share or competitor pricing.",
+      "additional_data": "Structured win/loss research, competitor identifiers and dated market/rights data.",
+      "implementation_status": "planned"
+    },
+    {
+      "id": "incident_explanation",
+      "family": "Reliability investigation",
+      "kind": "inquisitive",
+      "question": "What verified incident records explain reported service failures?",
+      "availability": "blocked",
+      "sources": [
+        "incident_history",
+        "root_cause_reports",
+        "service_telemetry"
+      ],
+      "qualification": "Current tickets and notes cannot establish root cause.",
+      "additional_data": "Adjudicated incident reports, telemetry and verified client-impact links.",
+      "implementation_status": "planned"
+    }
+  ],
+  "inquisitive_output_fields": [
+    "descriptive_observation",
+    "question",
+    "hypothesis",
+    "method_and_scope",
+    "supporting_evidence",
+    "counterevidence",
+    "limitations",
+    "conclusion_status",
+    "clarification_questions"
+  ],
+  "inquisitive_conclusion_statuses": [
+    "supported_by_available_evidence",
+    "contradicted_by_available_evidence",
+    "insufficient_evidence",
+    "not_testable_with_available_data"
+  ],
+  "sales_suggestion_contract": {
+    "enabled": true,
+    "layer": "briefing_synthesis",
+    "analysis_scope": [
+      "descriptive",
+      "inquisitive"
+    ],
+    "excluded_models": [
+      "predictive",
+      "prescriptive_optimisation"
+    ],
+    "required_fields": [
+      "suggestion_id",
+      "suggested_action",
+      "rationale",
+      "counterevidence_and_constraints",
+      "assumptions",
+      "validation_questions",
+      "readiness"
+    ],
+    "rationale_item_required_fields": [
+      "reason",
+      "evidence_refs"
+    ],
+    "readiness_values": [
+      "ready_for_discussion",
+      "needs_validation",
+      "withheld"
+    ],
+    "display": {
+      "show_action_and_why_together": true,
+      "show_reason_level_citations": true,
+      "show_constraints_and_validation_questions": true,
+      "evidence_file_alone_is_insufficient": true,
+      "style": "Concise business justification connecting observed facts or attributed needs to the suggested action."
+    },
+    "rules": [
+      "Build suggestions from verified descriptive or inquisitive findings; do not invent client needs, budgets, rights or readiness.",
+      "Each rationale item must reference evidence supporting the reason and its relevance to the action.",
+      "Catalogue affinity or peer adoption alone supports a discovery question, not an asserted client need.",
+      "Retain material counterevidence, previous objections, eligibility restrictions and unresolved coverage gaps.",
+      "Separate recorded client commitments from newly suggested actions; do not invent owners or deadlines.",
+      "When evidence is insufficient, withhold the commercial recommendation and state what must be clarified.",
+      "Do not claim purchase probability, guaranteed benefit, forecast revenue, optimal price or best possible action.",
+      "Any figures in a rationale come from cited tools with matching entity, period, metric and units."
+    ],
+    "verification_failure_policy": "Repair within a bounded pass, then withhold the suggestion if evidence or rationale remains unsupported."
+  }
+}

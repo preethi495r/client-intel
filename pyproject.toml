@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "client-intel"
+version = "0.1.0"
+description = "Cited sales briefings for the synthetic client intelligence snapshot"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.optional-dependencies]
+web = ["fastapi==0.163.2", "uvicorn==0.54.0"]
+
+[tool.setuptools.packages.find]
+include = ["client_intel*"]
+
+[tool.setuptools.package-data]
+client_intel = ["config/*.json", "prompts/*.txt"]
+"client_intel.web" = ["static/*.html", "static/*.css", "static/*.js"]

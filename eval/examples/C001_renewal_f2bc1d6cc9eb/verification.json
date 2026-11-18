@@ -1,0 +1,31 @@
+{
+  "status": "verified_with_gaps",
+  "stage": "finished",
+  "model": {
+    "provider": "openai",
+    "model": "gpt-6.2-sol",
+    "reported_model": "gpt-6.2-sol",
+    "usage": {
+      "input_tokens": 2296,
+      "input_tokens_details": {
+        "cache_write_tokens": 1795,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 1795
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 159,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2455
+    },
+    "seconds": 3.247
+  },
+  "draft_checks": [],
+  "render_checks": [],
+  "emitted_claim_count": 13,
+  "emitted_action_count": 2,
+  "seconds": 3.269
+}

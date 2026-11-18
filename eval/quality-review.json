@@ -1,0 +1,62 @@
+{
+  "method": "Manual artifact review by the coding agent against the frozen Milestone 1 outputs",
+  "levels": {"0": "The dimension is missing or misleading", "1": "Usable with a material improvement available", "2": "Meets the dimension for this request"},
+  "dimensions": {
+    "support": "Figures, attributed statements and account facts resolve to appropriate evidence.",
+    "uncertainty": "Material coverage, source and interpretation limits are visible.",
+    "inquiry": "Questions or actions address the unanswered decision and avoid claiming cause.",
+    "focus": "The lead and next step address the trigger's priority.",
+    "rationale": "Cited reasons explain the action and carry material constraints.",
+    "readability": "The lead is scannable and rationale avoids unnecessary repetition."
+  },
+  "cases": {
+    "c001_at_risk": {
+      "support": [2, "The comparable product declines and open P1 each cite their own records.", ["lead.1", "lead.2", "lead.3"]],
+      "uncertainty": [2, "The action frames latency, supplier trial and budget as contributors to check. Notice status stays unconfirmed.", ["action.1", "gaps.1"]],
+      "inquiry": [2, "Asking how each reported issue affected usage and desired scope gives the rep a retention question.", ["action.1"]],
+      "focus": [2, "The biggest decline and unresolved P1 lead the retention story.", ["lead.1", "lead.2"]],
+      "rationale": [1, "The adjacent reasons show trading complaints and proposal scope. An explicit link to the current P1 would strengthen the action.", ["action.1.why.1", "action.1.why.3", "lead.2"]],
+      "readability": [2, "The first three items expose separate product and service signals in a clear order.", ["lead.1", "lead.2", "lead.3"]]
+    },
+    "c001_renewal": {
+      "support": [2, "Signed ARR, recorded notice and proposed CRM ARR use distinct records.", ["lead.1", "lead.2", "lead.3"]],
+      "uncertainty": [2, "The brief leaves actual delivery or waiver of notice and execution open.", ["action.1", "gaps.1"]],
+      "inquiry": [2, "The rep can confirm proposed scope and the service requirement in the proper renewal conversation.", ["action.2"]],
+      "focus": [2, "Notice and signature evidence precede product usage and service context.", ["lead.1", "lead.2", "context.1"]],
+      "rationale": [2, "Procurement's request and the open latency case motivate the scope question.", ["action.2.why.1", "action.2.why.2"]],
+      "readability": [2, "The lead offers a direct sequence from end and notice dates to signed amount and proposal.", ["lead.1", "lead.2", "lead.3"]]
+    },
+    "c002_upsell": {
+      "support": [2, "Product fit cites the catalogue and holdings, and the client's request stays attributed.", ["lead.1", "lead.2", "lead.3"]],
+      "uncertainty": [2, "Budget and feasibility require discovery, and invoice evidence is unavailable.", ["gaps.1", "gaps.2"]],
+      "inquiry": [2, "The demo has a concrete build-or-buy validation question.", ["action.1"]],
+      "focus": [2, "The strongest product gap comes before the allowance discussion.", ["lead.1", "action.1", "action.2"]],
+      "rationale": [2, "Catalogue capability and an independent feature request support the demo.", ["action.1.why.1", "action.1.why.2"]],
+      "readability": [1, "The full catalogue paragraph repeats in the demo rationale.", ["lead.1", "action.1.why.1"]]
+    },
+    "c002_meeting_prep": {
+      "support": [2, "Attributed request and measured streaming use stay distinct from the billing concern.", ["lead.1", "context.2", "action.2.why.1"]],
+      "uncertainty": [2, "The invoice gap tells the rep which cost conclusion remains open.", ["gaps.1", "action.2"]],
+      "inquiry": [2, "The widgets and streaming questions form a practical two-topic agenda.", ["action.1", "action.2"]],
+      "focus": [1, "The signed ARR and old lost offer take lead space from the streaming-cost concern.", ["lead.2", "lead.3", "action.2.why.1"]],
+      "rationale": [2, "The note action, attributed cost concern and measured growth support discussing the allowance.", ["action.2.why.1", "action.2.why.2", "action.2.why.3"]],
+      "readability": [1, "The embeddable request and streaming comparison each repeat across sections.", ["lead.1", "action.1.why.2", "context.2", "action.2.why.3"]]
+    },
+    "c007_renewal": {
+      "support": [2, "Historical term dates, pending draft and CRM negotiation each resolve separately.", ["lead.1", "lead.2", "context.1"]],
+      "uncertainty": [2, "Signed fees and October commercial authority remain open despite observed usage.", ["gaps.2", "gaps.3"]],
+      "inquiry": [2, "Execution and interim authorization become distinct questions.", ["action.1", "action.2"]],
+      "focus": [2, "The expired term and current signature gap lead.", ["lead.1", "lead.2"]],
+      "rationale": [2, "The note commitment and continued use make interim authority a concrete follow-up.", ["action.2.why.1", "action.2.why.2"]],
+      "readability": [2, "A two-item lead and distinct follow-ups keep the decision visible.", ["lead.1", "lead.2", "action.2"]]
+    },
+    "c007_meeting_prep": {
+      "support": [2, "The note account, CRM stage and pending signature are documented separately.", ["lead.3", "context.1", "context.2"]],
+      "uncertainty": [2, "Any later approval, signed fees and ongoing coverage need confirmation.", ["gaps.1", "gaps.2", "gaps.3"]],
+      "inquiry": [2, "Separate questions identify interim service authority and the remaining legal step.", ["action.1", "action.2"]],
+      "focus": [2, "Service continuity and the negotiation status set the agenda immediately.", ["lead.2", "lead.3"]],
+      "rationale": [2, "The note reports commercial agreement and the pending export still requires signature.", ["action.2.why.1", "action.2.why.2"]],
+      "readability": [1, "Several contract and note facts repeat verbatim in the rationale.", ["context.1", "context.2", "action.2.why.1", "action.2.why.2"]]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "127.0.0.1:${CLIENT_INTEL_HOST_PORT:-8000}:8000"
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      CLIENT_INTEL_MODEL: ${CLIENT_INTEL_MODEL:-gpt-6.2-sol}
+      CLIENT_INTEL_MODEL_PROVIDER: openai
+      CLIENT_INTEL_MODEL_TIMEOUT: ${CLIENT_INTEL_MODEL_TIMEOUT:-240}
+      CLIENT_INTEL_DATA_DIR: /data
+      CLIENT_INTEL_OUTPUT_DIR: /outputs
+      CLIENT_INTEL_STATE_DIR: /state
+      CLIENT_INTEL_CONFIG_DIR: /app/config
+    volumes:
+      - type: bind
+        source: ${CLIENT_INTEL_HOST_DATA_DIR:?Set CLIENT_INTEL_HOST_DATA_DIR to the extracted starter pack}
+        target: /data
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ${CLIENT_INTEL_HOST_OUTPUT_DIR:-./outputs}
+        target: /outputs
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ${CLIENT_INTEL_HOST_STATE_DIR:-./.client-intel-state}
+        target: /state
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./client_intel/config
+        target: /app/config
+        read_only: true
+        bind:
+          create_host_path: false
+    healthcheck:
+      test: ["CMD", "python", "-c", "from urllib.request import urlopen; urlopen('http://127.0.0.1:8000/ready', timeout=3)"]
+      interval: 10s
+      timeout: 4s
+      start_period: 5s
+      retries: 3

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Client intelligence</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="/assets/app.js" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>Client intelligence</span>
+      <span class="snapshot">Snapshot · 1 November 2026</span>
+    </div>
+  </header>
+  <main class="workspace">
+    <section class="panel configuration" aria-labelledby="new-briefing">
+      <h1 id="new-briefing">New briefing</h1>
+      <form id="request-form">
+        <label for="client">Client</label>
+        <select id="client" name="client" required><option value="">Loading clients…</option></select>
+        <label for="trigger">Trigger</label>
+        <select id="trigger" name="trigger" required><option value="">Loading triggers…</option></select>
+        <label for="rep-context">Rep context <span class="optional">Optional</span></label>
+        <textarea id="rep-context" name="rep_context" maxlength="2000" rows="4" placeholder="What do you need to clarify?"></textarea>
+        <button id="generate" type="submit" disabled>Generate briefing</button>
+      </form>
+      <p id="status" class="status" aria-live="polite"></p>
+    </section>
+    <section class="panel results" aria-labelledby="result-title">
+      <div class="result-header">
+        <div>
+          <h2 id="result-title">Briefing</h2>
+          <p id="result-meta" class="result-meta" hidden></p>
+        </div>
+        <span id="result-badge" class="badge" hidden></span>
+      </div>
+      <div id="empty" class="empty">
+        <p>Choose a client and trigger to generate a briefing.</p>
+      </div>
+      <div id="briefing" class="briefing" hidden></div>
+      <aside id="evidence" class="evidence" aria-label="Citation evidence" hidden></aside>
+      <nav id="downloads" class="downloads" aria-label="Download artifacts" hidden></nav>
+    </section>
+  </main>
+</body>
+</html>
